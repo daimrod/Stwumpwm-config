@@ -1,4 +1,6 @@
-;;;; config-frame.lisp
+;;;; config-frames.lisp
+
+(in-package #:stumpwm)
 
 (define-frame-preference
     "web"
