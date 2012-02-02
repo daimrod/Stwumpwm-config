@@ -11,3 +11,9 @@ Use M-x slime-connect"
                        :style swank:*communication-style*
                        :dont-close t))
 
+(defun global-set-key (key command)
+  "Map KEY to COMMAND in the root keymap."
+  (define-key *root-map* key command))
+
+(defun spawn (command)
+  (concat "run-shell-command " command))
