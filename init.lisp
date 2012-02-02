@@ -28,4 +28,4 @@ Use M-x slime-connect"
           "skype"
           "zotero")))
 
-(load-module "frame")
+(load-module "config-frame")

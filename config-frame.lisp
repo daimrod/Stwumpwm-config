@@ -1,4 +1,4 @@
-;;;; frame.lisp
+;;;; config-frame.lisp
 
 (define-frame-preference
     "web"
