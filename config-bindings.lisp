@@ -4,16 +4,30 @@
 
 (set-prefix-key (kbd "s-s"))
 
-(flet ((top-set-key-gselect (n)
-         (let ((group (format nil "~A" n)))
-           (define-key *top-map* (kbd (concat "s-" group)) (concat "gselect " group)))))
-  (mapc #'top-set-key-gselect
+(flet ((top-set-key (command &optional prefix)
+         (lambda (n)
+          (let ((group (format nil "~A" n)))
+            (define-key *top-map* (kbd (concat "s-" prefix group)) (concat command " " group))))))
+  (mapc (top-set-key "gselect")
         '(1 2 3 4 5 6 7 8 9)))
 
+(flet ((top-set-key-helper (args)
+         (destructuring-bind (key command) args
+           (top-set-key (kbd key) command))))
+  (mapc #'top-set-key-helper
+        `(("s-!"  "gmove 1")
+          ("s-@"  "gmove 2")
+          ("s-#"  "gmove 3")
+          ("s-$"  "gmove 4")
+          ("s-%"  "gmove 5")
+          ("s-^"  "gmove 6")
+          ("s-&"  "gmove 7")
+          ("s-*"  "gmove 8")
+          ("s-("  "gmove 9"))))
+
 (flet ((global-set-key-helper (args)
-         (let ((key (first args))
-               (command (second args)))
-           (global-set-key (kbd key) command))))
+         (destructuring-bind (key command) args
+          (global-set-key (kbd key) command))))
   (mapc #'global-set-key-helper
         `(("s-e"        ,(spawn "~/bin/emacsc"))
           ("s-RET"      ,(spawn "sakura -e tmux"))

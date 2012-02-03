@@ -15,5 +15,9 @@ Use M-x slime-connect"
   "Map KEY to COMMAND in the root keymap."
   (define-key *root-map* key command))
 
+(defun top-set-key (key command)
+  "Map KEY to COMMAND in the top keymap."
+  (define-key *top-map* key command))
+
 (defun spawn (command)
   (concat "run-shell-command " command))
