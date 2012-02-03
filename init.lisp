@@ -11,7 +11,6 @@
 (defvar *stumpwm-started* nil)
 (unless *stumpwm-started*
   (setf *stumpwm-started* t)
-  (start-swank)
   (grename "emacs")
   (mapc #'gnewbg
         '("web"

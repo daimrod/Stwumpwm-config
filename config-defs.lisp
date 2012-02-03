@@ -2,12 +2,12 @@
 
 (in-package #:stumpwm)
 
-(defcommand start-swank () ()
+(defcommand start-swank (port) ((:number "Port: "))
   "Launch a swank server
 Use M-x slime-connect"
   (setf stumpwm:*top-level-error-action* :break)
   (swank-loader:init)
-  (swank:create-server :port 4005
+  (swank:create-server :port port
                        :style swank:*communication-style*
                        :dont-close t))
 
