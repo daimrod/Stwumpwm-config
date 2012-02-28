@@ -19,7 +19,7 @@
 (setf *colors* *theme-tango*)
 
 (set-focus-color #x3465a4)
-(set-unfocus-color #x555753)
+(set-unfocus-color #x1a1a1a)
 (set-border-color #x729fcf)
 (set-bg-color #x2e3436)
 (set-fg-color #xeeeeec)
