@@ -1,9 +1,8 @@
-;;;; stumpwm-init.asd
+;;;; stumpwm-config.asd
 
-(asdf:defsystem #:stumpwm-init
+(asdf:defsystem #:stumpwm-config
   :serial t
   :depends-on (#:stumpwm
-               #:stumpwm-contrib
                #:swank)
   :components ((:file "config-defs")
                (:file "config-frames")
