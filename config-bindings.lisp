@@ -25,7 +25,10 @@
           ("s-^"  "gmove 6")
           ("s-&"  "gmove 7")
           ("s-*"  "gmove 8")
-          ("s-("  "gmove 9"))))
+          ("s-("  "gmove 9")
+          ("XF86AudioLowerVolume" ,(spawn "ossmix -- vmix0-outvol -0.2"))
+          ("XF86AudioRaiseVolume" ,(spawn "ossmix -- vmix0-outvol +0.2"))
+          ("XF86AudioMute" ,(spawn "ossmix -- misc.front-mute TOGGLE")))))
 
 ;;; Misc bindings
 (flet ((global-set-key-helper (args)
@@ -33,8 +36,7 @@
           (global-set-key (kbd key) command))))
   (mapc #'global-set-key-helper
         `(("s-e"        ,(spawn "~/bin/emacsc"))
-          ("s-RET"      ,(spawn "sakura -e tmux"))
-          ("RET"        ,(spawn "sakura -e tmux"))
+          ("s-RET"      ,(spawn "sakura"))
+          ("RET"        ,(spawn "sakura"))
           ("s-S-RET"    ,(spawn "sakura"))
-          ("s-p"        ,(spawn "~/bin/dmenu_launcher"))
           ("V"          "vsplit"))))
