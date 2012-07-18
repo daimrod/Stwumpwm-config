@@ -28,7 +28,11 @@
           ("s-("  "gmove 9")
           ("XF86AudioLowerVolume" ,(spawn "ossmix -- vmix0-outvol -0.2"))
           ("XF86AudioRaiseVolume" ,(spawn "ossmix -- vmix0-outvol +0.2"))
-          ("XF86AudioMute" ,(spawn "ossmix -- misc.front-mute TOGGLE")))))
+          ("XF86AudioMute" ,(spawn "ossmix -- misc.front-mute TOGGLE"))
+          ("XF86AudioPlay" ,(spawn "mpc toggle"))
+          ("XF86AudioStop" ,(spawn "mpc stop"))
+          ("XF86AudioNext" ,(spawn "mpc next"))
+          ("XF86AudioPrev" ,(spawn "mpc prev")))))
 
 ;;; Misc bindings
 (flet ((global-set-key-helper (args)
