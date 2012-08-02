@@ -43,4 +43,6 @@
           ("s-RET"      ,(spawn "sakura"))
           ("RET"        ,(spawn "sakura"))
           ("s-S-RET"    ,(spawn "sakura"))
-          ("V"          "vsplit"))))
+          ("V"          "vsplit")
+          ("H"          "hsplit")
+          ("S"          "websearch"))))
