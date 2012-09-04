@@ -40,6 +40,7 @@
           (global-set-key (kbd key) command))))
   (mapc #'global-set-key-helper
         `(("s-e"        ,(spawn "~/bin/emacsc"))
+          ("s-E"        ,(spawn "emacs"))
           ("s-RET"      ,(spawn "sakura"))
           ("RET"        ,(spawn "sakura"))
           ("s-S-RET"    ,(spawn "sakura"))
