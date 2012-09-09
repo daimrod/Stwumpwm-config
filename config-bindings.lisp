@@ -41,9 +41,9 @@
   (mapc #'global-set-key-helper
         `(("s-e"        ,(spawn "~/bin/emacsc"))
           ("s-E"        ,(spawn "emacs"))
-          ("s-RET"      ,(spawn "sakura"))
-          ("RET"        ,(spawn "sakura"))
-          ("s-S-RET"    ,(spawn "sakura"))
+          ("s-RET"      ,(spawn *xterm*))
+          ("RET"        ,(spawn *xterm*))
+          ("s-S-RET"    ,(spawn *xterm*))
           ("V"          "vsplit")
           ("H"          "hsplit")
           ("S"          "websearch"))))

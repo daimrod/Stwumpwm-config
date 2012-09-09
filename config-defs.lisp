@@ -26,3 +26,5 @@ Use M-x slime-connect"
 (defcommand websearch (search-terms) ((:shell "Search: "))
   "Use Conkeror the run a web search."
   (run-prog *webbrowser-program* :args (list search-terms) :wait nil))
+
+(defvar *xterm* "exo-open --launch TerminalEmulator")
