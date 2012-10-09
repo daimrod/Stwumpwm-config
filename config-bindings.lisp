@@ -48,3 +48,5 @@
           ("V"          "vsplit")
           ("H"          "hsplit")
           ("S"          "websearch"))))
+
+(define-key *groups-map* (kbd "f") "gnew-float")
