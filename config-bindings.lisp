@@ -47,6 +47,7 @@
           ("s-S-RET"    ,(spawn *xterm*))
           ("V"          "vsplit")
           ("H"          "hsplit")
-          ("S"          "websearch"))))
+          ("S"          "websearch")
+          ("ISO_Left_Tab" "prev"))))
 
 (define-key *groups-map* (kbd "f") "gnew-float")
