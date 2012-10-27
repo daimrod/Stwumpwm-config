@@ -8,8 +8,8 @@
 ;;; Map [prefix s-X] to switch to the group X
 (flet ((top-set-key (command &optional prefix)
          (lambda (n)
-          (let ((group (format nil "~A" n)))
-            (define-key *top-map* (kbd (concat "s-" prefix group)) (concat command " " group))))))
+           (let ((group (format nil "~A" n)))
+             (define-key *top-map* (kbd (concat "s-" prefix group)) (concat command " " group))))))
   (mapc (top-set-key "gselect")
         '(1 2 3 4 5 6 7 8 9)))
 
@@ -38,7 +38,7 @@
 ;;; Misc bindings
 (flet ((global-set-key-helper (args)
          (destructuring-bind (key command) args
-          (global-set-key (kbd key) command))))
+           (global-set-key (kbd key) command))))
   (mapc #'global-set-key-helper
         `(("s-e"        ,(spawn "~/bin/emacsc"))
           ("s-E"        ,(spawn "emacs"))
