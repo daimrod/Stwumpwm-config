@@ -25,7 +25,7 @@ Use M-x slime-connect"
 
 (defparameter *webbrowser-program* "conkeror")
 (defcommand websearch (search-terms) ((:shell "Search: "))
-  "Use Conkeror the run a web search."
+  "Use Conkeror to run a web search."
   (run-prog "/bin/sh" :args (list "-c"
                                   (format nil "~A \"~A\""
                                           *webbrowser-program* search-terms))
