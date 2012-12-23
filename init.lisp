@@ -15,3 +15,5 @@
           "anon"
           "skype"
           "zotero")))
+
+(inferior-shell:run "sh ~/.post-wm &")

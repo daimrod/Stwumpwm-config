@@ -4,7 +4,8 @@
 (asdf:defsystem #:stumpwm-config
   :serial t
   :depends-on (#:stumpwm
-               #:swank)
+               #:swank
+               #:inferior-shell)
   :components ((:file "config-defs")
                (:file "config-theme")
                (:file "config-bindings")
